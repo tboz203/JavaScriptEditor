@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript Figure</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <style type="text/css">
+	table {
+		border: none;
+		border-collapse:collapse;
+		padding: 0px;
+		margin: 0px;
+	}
+	td {
+		border:none;
+		border-collapse:collapse;
+		padding: 0px;
+		margin: 0px;
+	}
+	.innerTable {
+		border: none;
+		border-collapse:collapse;
+		padding: 0px;
+		margin: 0px;
+	}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
+
+</head>
+	<body>
+	<div id="selectDialog">
+		<select id="dropDown" size="4">
+		  <option value="i1">Item 1</option>
+		  <option value="i2">Item 2</option>
+		  <option value="i3">Item 3</option>
+		  <option value="i4">Item 4</option>
+		  <option value="i5"> Item 5</option>
+		</select>
+	</div>
+	
+		<div>
+			<!--<textarea class='col-lg-4' id='codeBox' rows='34' readonly></textarea>-->
+			<div class='col-lg-4'>
+			<table id='editor'>
+			<tr>
+			<td>
+			<table class='innerTable'>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>while</td>
+				<td>&nbsp(</td>
+				<td>true</td>
+				<td>)</td>
+				<td>&nbsp{</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			
+			<tr>
+			<td>
+			<table class='innerTable'>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>&nbsp;&nbsp;&nbsp;test</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			
+			<tr>
+			<td>
+			<table class='innerTable'>
+			<tr>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>}</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			
+			<tr>
+			<td>
+			<table class='innerTable'>
+			<tr>
+				<td>&nbsp;&#8594;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</td>
+			</tr>
+			</table>
+			</td>
+			</tr>
+			
+			</table>
+			</div>
+
+			<div class='col-lg-4'>
+				<textarea class='col-lg-12' id='varBox' rows='4' readonly></textarea>
+				<textarea class='col-lg-12' id='outputBox' rows='30' readonly></textarea>
+			</div>
+		</div>
+		
+		<div>
+		<button type="button" onclick="walk()">Walk</button>
+		</div>
+		<div>
+		<button type="button" onclick="run()">Run</button>
+		</div>
+		<div>
+		<button type="button" onclick="runSlow()">Run Slow</button>
+		</div>
+		<div>
+		<button type="button" onclick="stopRun()">Stop</button>
+		</div>
+		<div>
+		<button type="button" onclick="restart()">Restart</button>
+		</div>
+		<div>
+		<br>
+		<button type="button" onclick="addVariable()">Variable</button>
+		</div>
+		<div>
+		<button type="button" onclick="addArray()">Array</button>
+		</div>
+		<div>
+		<button type="button" onclick="addFunctionDeclaration()">Declare Function</button>
+		</div>
+		<div>
+		<button type="button" onclick="addAssignment()">Assign</button>
+		</div>
+		<div>
+		<button type="button" onclick="addWrite()">Write</button>
+		</div>
+		<div>
+		<button type="button" onclick="addWriteln()">Writeln</button>
+		</div>
+		<div>
+		<button type="button" onclick="addStringPrompt()">String Prompt</button>
+		</div>
+		<div>
+		<button type="button" onclick="addNumericPrompt()">Numeric Prompt</button>
+		</div>
+		<div>
+		<button type="button" onclick="addWhile()">While</button>
+		</div>
+		<div>
+		<button type="button" onclick="addFor()">For</button>
+		</div>
+		<div>
+		<button type="button" onclick="addIf()">If...then</button>
+		</div>
+		<div>
+		<button type="button" onclick="addIfElse()">If...else</button>
+		</div>
+		<div>
+		<button type="button" onclick="addFunctionCall()">Call Function</button>
+		</div>
+		<div>
+		<button type="button" onclick="addReturn()">Return</button>
+		</div>
+		<!--<script src="js/beerFigure.js"></script>-->
+		<script src="js/editor.js"></script>
+	</body>
+	
+	
+</html>
