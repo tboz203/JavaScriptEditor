@@ -1,166 +1,76 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    
 <head>
-  <meta charset="utf-8">
-  <title>JavaScript Figure</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <style type="text/css">
-	table {
-		border: none;
-		border-collapse:collapse;
-		padding: 0px;
-		margin: 0px;
-	}
-	td {
-		border:none;
-		border-collapse:collapse;
-		padding: 0px;
-		margin: 0px;
-	}
-	.innerTable {
-		border: none;
-		border-collapse:collapse;
-		padding: 0px;
-		margin: 0px;
-	}
-	</style>
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type=text/css">
+	<script src="js/jquery-1.10.2.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/ui-lightness/jquery-ui.css">
-
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css">
+    <title>JavaScript Lab</title>
 </head>
-	<body>
-	<div id="selectDialog">
-		<select id="dropDown" size="4">
+
+<body class="body">
+    <header class="mainheader">
+        
+    </header>
+	<div id="selectDialog" style="text-align:center">
+		<select id="dropDown" size="4" style="width: 100%;margin-bottom:10px">
 		  <option value="i1">Item 1</option>
 		  <option value="i2">Item 2</option>
 		  <option value="i3">Item 3</option>
 		  <option value="i4">Item 4</option>
 		  <option value="i5"> Item 5</option>
 		</select>
+		<div>
+		<button type="button" style="width:4em;height:2em">Okay</button>
+		<button type="button" style="width:4em;height:2em">Cancel</button>
+		</div>
 	</div>
-	
-		<div>
-			<!--<textarea class='col-lg-4' id='codeBox' rows='34' readonly></textarea>-->
-			<div class='col-lg-4'>
-			<table id='editor'>
-			<tr>
-			<td>
-			<table class='innerTable'>
-			<tr>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td>while</td>
-				<td>&nbsp(</td>
-				<td>true</td>
-				<td>)</td>
-				<td>&nbsp{</td>
-			</tr>
-			</table>
-			</td>
-			</tr>
-			
-			<tr>
-			<td>
-			<table class='innerTable'>
-			<tr>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td>&nbsp;&nbsp;&nbsp;test</td>
-			</tr>
-			</table>
-			</td>
-			</tr>
-			
-			<tr>
-			<td>
-			<table class='innerTable'>
-			<tr>
-				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-				<td>}</td>
-			</tr>
-			</table>
-			</td>
-			</tr>
-			
-			<tr>
-			<td>
-			<table class='innerTable'>
-			<tr>
-				<td>&nbsp;&#8594;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;</td>
-			</tr>
-			</table>
-			</td>
-			</tr>
-			
-			</table>
-			</div>
+    
+    <div class="leftcontent">
+        <h4>Code Window</h4>
+        <div id="txtbox" class="txtarea" style="height:500px;width:550px;border-style:ridge;float:left;overflow:auto;">
+			<table id='editor'></table>        
+        </div>
+    </div>
+    
+    <div class="middlecontent">
+        <div><button type="button" onclick="addVariable('variable')">Variable</button></div>
+        <div><button type="button" onclick="addVariable('array')">Array</button></div>
+        <div><button type="button" onclick="addFunction()">Declare Function</button></div>
+        <div><button type="button" onclick="addOneLineElement('assignment')">Assign</button></div>
+        <div><button type="button" onclick="addOneLineElement('write')">Write</button></div>
+        <div><button type="button" onclick="addOneLineElement('writeln')">Writeln</button></div>
+        <div><button type="button" onclick="addOneLineElement('stringPrompt')">String Prompt</button></div>
+        <div><button type="button" onclick="addOneLineElement('numericPrompt')">Numeric Prompt</button></div>
+        <div><button type="button" onclick="addWhile()">While</button></div>
+        <div><button type="button" onclick="addFor()">For</button></div>
+        <div><button type="button" onclick="addIfThen()">If...Then</button></div>
+        <div><button type="button" onclick="addIfElse()">If...Else</button></div>
+        <div><button type="button" onclick="addOneLineElement('functionCall')">Call Function</button></div>
+        <div><button type="button" onclick="addOneLineElement('return')">Return</button></div>
+    </div>
+    
+    <aside class="toprightcontent">
+        <h4>Program Output</h4>
+        <textarea class="righttxtarea" rows="12" cols="50" wrap="hard">
+        </textarea>
+        <div class="rightbuttons">
+            <button type="button">Run</button>
+            <button type="button">Walk</button>
+        </div>
+    </aside>
+    
+    <aside class="bottomrightcontent">
+        <h4>Variables</h4>
+        <textarea class="bottomrighttxtarea" rows="13" cols="50" wrap="hard">
+        </textarea>
+    </aside>
+    
+    <script src="js/editor.js"></script>
 
-			<div class='col-lg-4'>
-				<textarea class='col-lg-12' id='varBox' rows='4' readonly></textarea>
-				<textarea class='col-lg-12' id='outputBox' rows='30' readonly></textarea>
-			</div>
-		</div>
-		
-		<div>
-		<button type="button" onclick="walk()">Walk</button>
-		</div>
-		<div>
-		<button type="button" onclick="run()">Run</button>
-		</div>
-		<div>
-		<button type="button" onclick="runSlow()">Run Slow</button>
-		</div>
-		<div>
-		<button type="button" onclick="stopRun()">Stop</button>
-		</div>
-		<div>
-		<button type="button" onclick="restart()">Restart</button>
-		</div>
-		<div>
-		<br>
-		<button type="button" onclick="addVariable()">Variable</button>
-		</div>
-		<div>
-		<button type="button" onclick="addArray()">Array</button>
-		</div>
-		<div>
-		<button type="button" onclick="addFunctionDeclaration()">Declare Function</button>
-		</div>
-		<div>
-		<button type="button" onclick="addAssignment()">Assign</button>
-		</div>
-		<div>
-		<button type="button" onclick="addWrite()">Write</button>
-		</div>
-		<div>
-		<button type="button" onclick="addWriteln()">Writeln</button>
-		</div>
-		<div>
-		<button type="button" onclick="addStringPrompt()">String Prompt</button>
-		</div>
-		<div>
-		<button type="button" onclick="addNumericPrompt()">Numeric Prompt</button>
-		</div>
-		<div>
-		<button type="button" onclick="addWhile()">While</button>
-		</div>
-		<div>
-		<button type="button" onclick="addFor()">For</button>
-		</div>
-		<div>
-		<button type="button" onclick="addIf()">If...then</button>
-		</div>
-		<div>
-		<button type="button" onclick="addIfElse()">If...else</button>
-		</div>
-		<div>
-		<button type="button" onclick="addFunctionCall()">Call Function</button>
-		</div>
-		<div>
-		<button type="button" onclick="addReturn()">Return</button>
-		</div>
-		<!--<script src="js/beerFigure.js"></script>-->
-		<script src="js/editor.js"></script>
-	</body>
-	
-	
+</body>
+
 </html>

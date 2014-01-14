@@ -1,0 +1,124 @@
+body {
+    background-color: white;
+    color: black;
+    font-size: 87.5%;
+    font-family: Courier New, 'Lucida Sans Unicode';
+    line-height: 1.5;
+    text-align: left;
+}
+
+.body {
+    margin: 0 auto;
+    width: 70%;
+    clear: both;
+}
+
+button[type=button] {
+    width: 10em;
+    height: 2.6em;
+}
+
+.popupButton {
+	width: 3em;
+	height: 1em;
+}
+
+.leftcontent {
+    width: 50%;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 1%;
+    padding-right: 5px;
+}
+
+.leftcontent h4 {
+    padding: 0%;
+    margin: 0%;
+}
+
+.txtarea {
+    width: 98.5%;
+    resize: none;
+    overflow: hidden;
+}
+
+.middlecontent {
+    width: auto;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 2.9%;
+    padding-top: 1px;
+    padding-right: 1px;
+}
+
+.toprightcontent {
+    width: 25%;
+    float: left;
+    background-color: white;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 1%;
+    padding-left: 5.5px;
+    padding-top: 1px;
+}
+
+.toprightcontent h4 {
+    padding: 0%;
+    margin: 0%;
+}
+
+.righttxtarea {
+    width: 96%;
+    resize: none;
+    overflow: hidden;
+}
+
+.rightbuttons {
+    padding-left: 1px;
+    padding-bottom: 2px;
+}
+
+.bottomrightcontent {
+    width: 25%;
+    float: left;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top: 0.5%;
+    padding-left: 5.5px;
+}
+
+.bottomrighttxtarea {
+    width: 96%;
+    resize: none;
+}
+
+.bottomrightcontent h4 {
+    padding: 0%;
+    margin: 0%;
+}
+
+table {
+	border: none;
+	border-collapse:collapse;
+	padding: 0px;
+	margin: 0px;
+}
+td {
+	border:none;
+	border-collapse:collapse;
+	padding: 0px;
+	margin: 0px;
+	font-family:Courier New; 
+}
+.innerTable {
+	border: none;
+	border-collapse:collapse;
+	padding: 0px;
+	margin: 0px;
+}
