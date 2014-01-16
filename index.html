@@ -1,41 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type=text/css">
-	<script src="js/jquery-1.10.2.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.css">
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-3.css">
     <title>JavaScript Lab</title>
 </head>
 
 <body class="body">
     <header class="mainheader">
-        
+
     </header>
-	<div id="selectDialog" style="text-align:center">
-		<select id="dropDown" size="4" style="width: 100%;margin-bottom:10px">
-		  <option value="i1">Item 1</option>
-		  <option value="i2">Item 2</option>
-		  <option value="i3">Item 3</option>
-		  <option value="i4">Item 4</option>
-		  <option value="i5"> Item 5</option>
-		</select>
-		<div>
-		<button type="button" style="width:4em;height:2em">Okay</button>
-		<button type="button" style="width:4em;height:2em">Cancel</button>
-		</div>
-	</div>
-    
+        <div id="selectDialog" style="text-align:center">
+                <select id="dropDown" size="4" style="width: 100%;margin-bottom:10px">
+                  <option value="i1">Item 1</option>
+                  <option value="i2">Item 2</option>
+                  <option value="i3">Item 3</option>
+                  <option value="i4">Item 4</option>
+                  <option value="i5"> Item 5</option>
+                </select>
+                <div>
+                <button type="button" style="width:4em;height:2em">Okay</button>
+                <button type="button" style="width:4em;height:2em">Cancel</button>
+                </div>
+        </div>
+
     <div class="leftcontent">
         <h4>Code Window</h4>
         <div id="txtbox" class="txtarea" style="height:500px;width:550px;border-style:ridge;float:left;overflow:auto;">
-			<table id='editor'></table>        
+                        <table id='editor'></table>
         </div>
     </div>
-    
+
     <div class="middlecontent">
         <div><button type="button" onclick="addVariable('variable')">Variable</button></div>
         <div><button type="button" onclick="addVariable('array')">Array</button></div>
@@ -52,7 +53,7 @@
         <div><button type="button" onclick="addOneLineElement('functionCall')">Call Function</button></div>
         <div><button type="button" onclick="addOneLineElement('return')">Return</button></div>
     </div>
-    
+
     <aside class="toprightcontent">
         <h4>Program Output</h4>
         <textarea class="righttxtarea" rows="12" cols="50" wrap="hard">
@@ -62,13 +63,13 @@
             <button type="button">Walk</button>
         </div>
     </aside>
-    
+
     <aside class="bottomrightcontent">
         <h4>Variables</h4>
         <textarea class="bottomrighttxtarea" rows="13" cols="50" wrap="hard">
         </textarea>
     </aside>
-    
+
     <script src="js/editor.js"></script>
 
 </body>
