@@ -19,8 +19,8 @@ button[type=button] {
 }
 
 .popupButton {
-	width: 3em;
-	height: 1em;
+    width: 3em;
+    height: 1em;
 }
 
 .leftcontent {
@@ -104,21 +104,23 @@ button[type=button] {
 }
 
 table {
-	border: none;
-	border-collapse:collapse;
-	padding: 0px;
-	margin: 0px;
+    border: none;
+    border-collapse:collapse;
+    padding: 0px;
+    margin: 0px;
 }
+
 td {
-	border:none;
-	border-collapse:collapse;
-	padding: 0px;
-	margin: 0px;
-	font-family:Courier New; 
+    border:none;
+    border-collapse:collapse;
+    padding: 0px;
+    margin: 0px;
+    font-family:Courier New; 
 }
+
 .innerTable {
-	border: none;
-	border-collapse:collapse;
-	padding: 0px;
-	margin: 0px;
+    border: none;
+    border-collapse:collapse;
+    padding: 0px;
+    margin: 0px;
 }
